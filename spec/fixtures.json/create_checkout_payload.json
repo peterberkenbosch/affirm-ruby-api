@@ -1,0 +1,58 @@
+{
+  "merchant": {
+    "public_api_key": "2BG5HE7ZYT2VY1GH",
+    "user_cancel_url": "https://e9ee9812.ngrok.io",
+    "user_confirmation_url": "https://e9ee9812.ngrok.io",
+    "name": "Affirm Ruby API merchant",
+    "exchange_lease_enabled": true
+  },
+  "billing": {
+    "name": { "full": "Engelbert Humpy" },
+    "phone_number": "9174477447",
+    "email": "humpy@testdomain.com",
+    "address": {
+      "line1": "21 W 29th St",
+      "line2": "room 123",
+      "city": "New York",
+      "state": "NY",
+      "zipcode": "10001",
+      "country": "US"
+    }
+  },
+  "shipping": {
+    "name": { "full": "Engelbert Humpy" },
+    "address": {
+      "line1": "21 W 29th St",
+      "line2": "room 123",
+      "city": "New York",
+      "state": "NY",
+      "zipcode": "10001",
+      "country": "US"
+    }
+  },
+  "total": 25000,
+  "order_id": "R637017224",
+  "tax_amount": 2500,
+  "shipping_amount": 999,
+  "items": [
+    {
+      "display_name":"Awesome Pants",
+      "sku":"ABC-123",
+      "unit_price":2500,
+      "qty":10,
+      "item_image_url":"http://merchantsite.com/images/awesome-pants.jpg",
+      "item_url":"http://merchantsite.com/products/awesome-pants.html",
+      "leasable": true
+    }
+  ],
+  "discounts": {
+    "RETURN5": {
+      "discount_amount":500,
+      "discount_display_name":"Returning customer 5% discount"
+    }
+  },
+  "metadata": {
+    "platform_type": "Ruby API CLI",
+    "platform_version": "0.1.0"
+  }
+}

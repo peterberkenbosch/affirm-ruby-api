@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Cache-Control: private, no-cache, no-store, must-revalidate
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Mon, 13 Apr 2020 07:57:01 GMT
+Server: openresty
+Set-Cookie: tracker_device=549e57d4-8d1a-4b22-80cf-ad12ff29f8a7; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 07:57:01 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: 3060738.3440491=549e57d4-8d1a-4b22-80cf-ad12ff29f8a7; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 07:57:01 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Strict-Transport-Security: max-age=86400
+Transfer-Encoding: chunked
+Vary: Accept-Encoding
+X-Affirm-Cache-Status: MISS
+X-Affirm-Request-Id: c34db14b-a7ca-4702-c77c-0e67cc995060
+
+{
+    "amount": 25000,
+    "amount_refunded": 0,
+    "authorization_expiration": "2020-04-29T12:55:39Z",
+    "checkout_id": "P08NWT3Z84P58GZS",
+    "created": "2020-03-30T12:36:17Z",
+    "currency": "USD",
+    "events": [],
+    "id": "DVEP-FTQO",
+    "order_id": "R637017534",
+    "provider_id": 1,
+    "status": "captured"
+}

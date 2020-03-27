@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Cache-Control: private, no-cache, no-store, must-revalidate
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Mon, 13 Apr 2020 11:58:49 GMT
+Server: openresty
+Set-Cookie: tracker_device=2453415f-f3a5-4c5a-a179-da99a7d4fad2; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 11:58:49 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: 3060738.3440491=2453415f-f3a5-4c5a-a179-da99a7d4fad2; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 11:58:49 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: session=eyJjb250ZXh0X2FyaSI6IjFFWllNQVFEU1pQU043UE0ifQ.EXXleQ.rk_mVws1KRflMEU0yQ0QQ9GQa5g; Secure; HttpOnly; Path=/; SameSite=None
+Strict-Transport-Security: max-age=86400
+Transfer-Encoding: chunked
+Vary: Accept-Encoding
+X-Affirm-Request-Id: 02a7a29a-537d-458a-c5f6-d5be7227f3cd
+
+{
+    "created": "2020-04-13T11:58:48Z",
+    "currency": "USD",
+    "id": "LSE-7MZU-P24E",
+    "type": "void"
+}

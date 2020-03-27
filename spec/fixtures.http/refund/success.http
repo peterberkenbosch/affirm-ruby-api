@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Cache-Control: private, no-cache, no-store, must-revalidate
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Mon, 13 Apr 2020 12:34:45 GMT
+Server: openresty
+Set-Cookie: tracker_device=3a94a693-eb94-4b71-84f6-28eede18eb28; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 12:34:45 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: 3060738.3440491=3a94a693-eb94-4b71-84f6-28eede18eb28; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 12:34:45 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: session=eyJjb250ZXh0X2FyaSI6Iks0RUYtSE0wMiJ9.EXXt5Q.86aZ0muWk3V03NWYBm8lLhbKprE; Secure; HttpOnly; Path=/; SameSite=None
+Strict-Transport-Security: max-age=86400
+Transfer-Encoding: chunked
+Vary: Accept-Encoding
+X-Affirm-Request-Id: 23bfdc27-e30f-4529-c57d-a7aa792aafda
+
+{
+    "amount": 105420,
+    "created": "2020-04-13T12:34:45Z",
+    "currency": "USD",
+    "fee_refunded": 0,
+    "id": "PM7VIBJBLOPC9YNA",
+    "type": "refund"
+}

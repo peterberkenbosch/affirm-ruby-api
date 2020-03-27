@@ -5,3 +5,7 @@ gemspec
 
 gem "rake", "~> 12.0"
 gem "rspec", "~> 3.0"
+gem "webmock", "~> 3.8"
+gem "pry"
+gem "standard"
+gem "simplecov", require: false, group: :test

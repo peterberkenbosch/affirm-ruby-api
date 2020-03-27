@@ -1,0 +1,34 @@
+name: Run Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+    - name: Build and test with Rake
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rake
+    - uses: devmasx/coverage-check-action@v1.1.0
+      with:
+        type: simplecov
+        result_path: coverage/.last_run.json
+        min_coverage: 100
+        token: ${{secrets.GITHUB_TOKEN}}
+    - name: StandardRB Linter
+      uses: andrewmcodes/standardrb-action@v0.0.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

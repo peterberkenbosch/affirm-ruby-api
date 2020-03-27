@@ -1,5 +1,15 @@
+require "simplecov"
+SimpleCov.start
+
 require "bundler/setup"
 require "affirm"
+require "pry"
+
+unless defined?(SPEC_ROOT)
+  SPEC_ROOT = File.expand_path(__dir__)
+end
+
+Dir[File.join(SPEC_ROOT, "support/**/*.rb")].sort.each { |f| require f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

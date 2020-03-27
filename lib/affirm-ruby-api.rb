@@ -1,1 +1,1 @@
-require_relative './affirm'
+require_relative "./affirm"

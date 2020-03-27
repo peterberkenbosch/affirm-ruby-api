@@ -1,0 +1,12 @@
+HTTP/1.1 404 Not Found
+Connection: keep-alive
+Content-Type: application/xml
+Date: Mon, 30 Mar 2020 15:57:39 GMT
+Server: openresty
+Transfer-Encoding: chunked
+X-Affirm-Cache-Status: MISS
+X-Affirm-Request-Id: fdf161fb-aa06-46ea-c652-d97fd0d0b7df
+cache-control: max-age=600
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>InvalidArgument</Code><Message>Unsupported Authorization Type</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>Basic MkJHNUhFN1pZVDJWWTFHSDp2RGNFUk55Q2VWckZiMk9XZmVGcEFvdzdnb3hqcmI1VA==</ArgumentValue><RequestId>1EF5E75D651A04A4</RequestId><HostId>5qt2zCGaOOVVEcfoXok1ZhkG8x1OwI1uOOqzpHLqC1P9NjhkFVnc/OCIk4kggJ6/FJJe5BQnjno=</HostId></Error>

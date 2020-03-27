@@ -1,0 +1,47 @@
+HTTP/1.1 200 OK
+Cache-Control: private, no-cache, no-store, must-revalidate
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Mon, 13 Apr 2020 12:04:27 GMT
+Server: openresty
+Set-Cookie: tracker_device=12543da4-3618-43d6-8166-e58ab858bd95; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 12:04:27 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: 3060738.3440491=12543da4-3618-43d6-8166-e58ab858bd95; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 12:04:27 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: session=eyJjb250ZXh0X2FyaSI6IjFFWllNQVFEU1pQU043UE0ifQ.EXXmyw.VqpMdJwRRFux22-Ilw2qAFsWO70; Secure; HttpOnly; Path=/; SameSite=None
+Strict-Transport-Security: max-age=86400
+Transfer-Encoding: chunked
+Vary: Accept-Encoding
+X-Affirm-Cache-Status: MISS
+X-Affirm-Request-Id: 236f33c6-7bda-4ee5-ce0e-48461ea880c1
+
+{
+    "amount": 210420,
+    "amount_refunded": 0,
+    "authorization_expiration": "2020-05-09T17:20:43Z",
+    "checkout_id": "1EZYMAQDSZPSN7PM",
+    "created": "2020-04-09T17:20:43Z",
+    "currency": "USD",
+    "events": [
+        {
+            "created": "2020-04-13T11:58:48Z",
+            "currency": "USD",
+            "id": "LSE-7MZU-P24E",
+            "type": "void"
+        },
+        {
+            "created": "2020-04-13T11:51:27Z",
+            "currency": "USD",
+            "id": "LSE-CC0X-ZW5I",
+            "type": "auth"
+        },
+        {
+            "created": "2020-04-09T17:22:02Z",
+            "currency": "USD",
+            "id": "LSE-N2OE-UX2H",
+            "type": "confirm"
+        }
+    ],
+    "id": "LS-4BSY-SV6E",
+    "provider_id": 2,
+    "status": "voided"
+}

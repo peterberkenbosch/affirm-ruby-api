@@ -1,0 +1,112 @@
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json
+Date: Sat, 28 Mar 2020 15:20:41 GMT
+Server: openresty
+Set-Cookie: tracker_device=bc20f05a-d821-4570-8cc3-5dff10b68bae; Domain=.affirm.com; Expires=Mon, 28-Mar-2022 15:20:41 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: 3060738.3440491=bc20f05a-d821-4570-8cc3-5dff10b68bae; Domain=.affirm.com; Expires=Mon, 28-Mar-2022 15:20:41 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: session=eyJjb250ZXh0X2FyaSI6IkhFWVI2VENWNFZCWDZOUE0ifQ.EWD8yQ.XnVasyKYIXj5X_yyx5279JLH-Ug; Secure; HttpOnly; Path=/; SameSite=None
+Strict-Transport-Security: max-age=86400
+X-Affirm-Cache-Status: MISS
+X-Affirm-Request-Id: bd10b716-de7e-4504-c5aa-63b97908a479
+cache-control: private, no-cache, no-store, must-revalidate
+
+{
+    "api_version": "v2",
+    "billing": {
+        "address": {
+            "city": "New York",
+            "country": "USA",
+            "line1": "21 W 29th St",
+            "line2": "room 123",
+            "state": "NY",
+            "zipcode": "10001"
+        },
+        "email": "test@example.com",
+        "name": {
+            "first": "John",
+            "full": "John Bar",
+            "last": "Bar"
+        },
+        "phone_number": "+1-917-447-7123"
+    },
+    "checkout_flow_type": "classic",
+    "checkout_status": "unknown",
+    "checkout_type": "merchant",
+    "config": {},
+    "currency": "USD",
+    "discounts": {
+        "RETURN5": {
+            "discount_amount": 500,
+            "discount_display_name": "Returning customer 5% discount"
+        }
+    },
+    "financing_program_external_name": "standard_3_6_12",
+    "financing_program_name": "standard_3_6_12",
+    "items": {
+        "ABC-123": {
+            "display_name": "Awesome Pants",
+            "item_image_url": "http://merchantsite.com/images/awesome-pants.jpg",
+            "item_type": "physical",
+            "item_url": "http://merchantsite.com/products/awesome-pants.html",
+            "leasable": true,
+            "qty": 3,
+            "sku": "ABC-123",
+            "unit_price": 1999
+        }
+    },
+    "loan_type": "classic",
+    "merchant": {
+        "exchange_lease_enabled": true,
+        "name": "Affirm Ruby API merchant",
+        "public_api_key": "2BG5HE7ZYT2VY1GH",
+        "user_cancel_url": "https://0d2bd47d.ngrok.io",
+        "user_confirmation_url": "https://0d2bd47d.ngrok.io"
+    },
+    "merchant_external_reference": "R637017522",
+    "metadata": {
+        "checkout_channel_type": "in_store",
+        "platform_type": "Ruby API CLI",
+        "platform_version": "0.1.0"
+    },
+    "mfp_rule_input_data": {
+        "items": {
+            "ABC-123": {
+                "display_name": "Awesome Pants",
+                "item_image_url": "http://merchantsite.com/images/awesome-pants.jpg",
+                "item_type": "physical",
+                "item_url": "http://merchantsite.com/products/awesome-pants.html",
+                "leasable": true,
+                "qty": 3,
+                "sku": "ABC-123",
+                "unit_price": 1999
+            }
+        },
+        "metadata": {
+            "checkout_channel_type": "in_store",
+            "platform_type": "Ruby API CLI",
+            "platform_version": "0.1.0"
+        },
+        "total": 25000
+    },
+    "order_id": "R637017522",
+    "product": "checkout",
+    "shipping": {
+        "address": {
+            "city": "New York",
+            "country": "USA",
+            "line1": "21 W 29th St",
+            "line2": "room 123",
+            "state": "NY",
+            "zipcode": "10001"
+        },
+        "name": {
+            "first": "John",
+            "full": "John Bar",
+            "last": "Bar"
+        }
+    },
+    "shipping_amount": 999,
+    "tax_amount": 2500,
+    "total": 25000
+}

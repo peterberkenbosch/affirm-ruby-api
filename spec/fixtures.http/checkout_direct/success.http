@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: Accept, Content-Type, X-Requested-With
+Access-Control-Allow-Methods: POST, OPTIONS
+Access-Control-Allow-Origin: None
+Access-Control-Max-Age: 86400
+Connection: keep-alive
+Content-Type: application/json
+Date: Mon, 30 Mar 2020 11:04:40 GMT
+Server: openresty
+Set-Cookie: tracker_device=e35f439d-f1e6-441f-9c43-073c3b3f6c7a; Domain=.affirm.com; Expires=Wed, 30-Mar-2022 11:04:40 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: 3060738.3440491=e35f439d-f1e6-441f-9c43-073c3b3f6c7a; Domain=.affirm.com; Expires=Wed, 30-Mar-2022 11:04:40 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: session=eyJjb250ZXh0X2FyaSI6Ik9MQlFaNjExVUJCQ0RaMjgifQ.EWNjyA.BbrjmVSGZhJOqzT8Bk_Y-HXvdvI; Secure; HttpOnly; Path=/; SameSite=None
+Strict-Transport-Security: max-age=86400
+Vary: Origin
+X-Affirm-Request-Id: 4a093a27-a7e9-4b8d-cb5b-dbcd02aa24a6
+cache-control: private, no-cache, no-store, must-revalidate
+
+{
+    "checkout_id": "OLBQZ611UBBCDZ28",
+    "redirect_url": "https://sandbox.affirm.com/checkout/2BG5HE7ZYT2VY1GH/new/OLBQZ611UBBCDZ28/"
+}

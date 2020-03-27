@@ -1,0 +1,18 @@
+HTTP/1.1 403 FORBIDDEN
+Cache-Control: private, no-cache, no-store, must-revalidate
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Mon, 13 Apr 2020 12:32:57 GMT
+Server: openresty
+Set-Cookie: tracker_device=fda0eaab-7615-47cd-afb8-083e0a8906bc; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 12:32:57 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: 3060738.3440491=fda0eaab-7615-47cd-afb8-083e0a8906bc; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 12:32:57 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Transfer-Encoding: chunked
+Vary: Accept-Encoding
+X-Affirm-Request-Id: 0843b178-e132-4c29-cc0a-69699d1f67ca
+
+{
+    "message": "The transaction is authorized and may not be refunded. Try voiding the transaction instead.",
+    "status_code": 403,
+    "type": "refund_forbidden_on_authorized"
+}

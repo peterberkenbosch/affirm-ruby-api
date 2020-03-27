@@ -1,4 +1,8 @@
-# Affirm::Ruby::Api
+# Affirm Ruby
+
+![Run Tests](https://github.com/peterberkenbosch/affirm-ruby-api/workflows/Run%20Tests/badge.svg)
+
+Implements the Affirm api using just Ruby. [Affirm documentation](https://docs.affirm.com/affirm-developers/reference)
 
 
 ## Installation

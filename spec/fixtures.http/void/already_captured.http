@@ -1,0 +1,18 @@
+HTTP/1.1 403 FORBIDDEN
+Cache-Control: private, no-cache, no-store, must-revalidate
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Mon, 13 Apr 2020 11:32:25 GMT
+Server: openresty
+Set-Cookie: tracker_device=8c13da97-c7a7-4998-b7f3-8430ab18a7ff; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 11:32:25 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: 3060738.3440491=8c13da97-c7a7-4998-b7f3-8430ab18a7ff; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 11:32:25 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Transfer-Encoding: chunked
+Vary: Accept-Encoding
+X-Affirm-Request-Id: fa7201aa-ece4-4ffd-cfcd-f10e51e30035
+
+{
+    "message": "The transaction has been captured and may no longer be voided.",
+    "status_code": 403,
+    "type": "void_forbidden_on_captured"
+}

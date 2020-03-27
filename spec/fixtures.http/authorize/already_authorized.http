@@ -1,0 +1,19 @@
+HTTP/1.1 403 FORBIDDEN
+Cache-Control: private, no-cache, no-store, must-revalidate
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: application/json
+Date: Mon, 13 Apr 2020 11:49:30 GMT
+Server: openresty
+Set-Cookie: tracker_device=0c38b21c-3523-4ef4-885b-8fa3d72bba5c; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 11:49:30 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: 3060738.3440491=0c38b21c-3523-4ef4-885b-8fa3d72bba5c; Domain=.affirm.com; Expires=Wed, 13-Apr-2022 11:49:30 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: session=eyJjb250ZXh0X2FyaSI6IlAwOE5XVDNaODRQNThHWlMifQ.EXXjSg.WBcGAi_wSjta-MAUhHvSp1RnZjg; Secure; HttpOnly; Path=/; SameSite=None
+Transfer-Encoding: chunked
+Vary: Accept-Encoding
+X-Affirm-Request-Id: fc58e45e-c790-416a-c1d0-f43392081800
+
+{
+    "message": "The transaction has already been authorized.",
+    "status_code": 403,
+    "type": "already_authorized"
+}

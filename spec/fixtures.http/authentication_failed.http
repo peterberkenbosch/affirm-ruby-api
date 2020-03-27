@@ -1,0 +1,16 @@
+HTTP/1.1 401 UNAUTHORIZED
+Connection: keep-alive
+Content-Type: application/json
+Date: Mon, 30 Mar 2020 15:42:37 GMT
+Server: openresty
+Set-Cookie: tracker_device=4c3ba276-ede7-4738-95dc-dde36c5582b6; Domain=.affirm.com; Expires=Wed, 30-Mar-2022 15:42:37 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+Set-Cookie: 3060738.3440491=4c3ba276-ede7-4738-95dc-dde36c5582b6; Domain=.affirm.com; Expires=Wed, 30-Mar-2022 15:42:37 GMT; Max-Age=63072000; Secure; Path=/; SameSite=None
+X-Affirm-Request-Id: 04628f6d-af62-4411-c40b-ea900ea4aa1b
+cache-control: private, no-cache, no-store, must-revalidate
+
+{
+    "code": "api-key-pair-invalid",
+    "message": "You have provided an invalid API key pair.",
+    "status_code": 401,
+    "type": "unauthorized"
+}
