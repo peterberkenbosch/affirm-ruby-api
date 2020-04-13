@@ -1,14 +1,6 @@
 require "spec_helper"
 
 RSpec.describe Affirm::Client, "starting_checkout" do
-  before do
-    Affirm.configure do |config|
-      config.environment = "sandbox"
-      config.public_api_key = "public_api_key"
-      config.private_api_key = "private_api_key"
-    end
-  end
-
   let(:payload) { read_json_fixture("create_checkout_payload.json") }
   let(:endpoint) { "https://sandbox.affirm.com/api/v2/checkout/store" }
   let(:success_fixture) { read_http_fixture("checkout_store/success.http") }
@@ -47,21 +39,9 @@ RSpec.describe Affirm::Client, "starting_checkout" do
 
   def stub_the_request
     stub_request(:post, endpoint)
-      .with(
-        headers: {
-          "Accept" => "application/json",
-          "Content-type" => "application/json",
-          "User-Agent" => /^Affirm\/#{Affirm::VERSION} Ruby\/#{RUBY_VERSION} OpenSSL\/.*$/
-        }
-      )
-      .with(
-        basic_auth: [
-          Affirm.config.public_api_key,
-          Affirm.config.private_api_key
-        ]
-      )
-      .with(
-        body: payload.to_json
-      ).to_return(success_fixture)
+      .with(headers: stub_headers)
+      .with(basic_auth: stub_basic_auth)
+      .with(body: payload.to_json)
+      .to_return(success_fixture)
   end
 end

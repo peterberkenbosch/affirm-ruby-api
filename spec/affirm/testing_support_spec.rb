@@ -14,4 +14,21 @@ RSpec.describe Affirm::TestingSupport::HttpResponses do
       expect(read_json_fixture(fixture_name)).to_not be_empty
     end
   end
+
+  describe "stub_headers" do
+    it "will return default headers to match with stubbing the request" do
+      stubbed_headers = {
+        "Accept" => "application/json",
+        "Content-type" => "application/json",
+        "User-Agent" => /^Affirm\/#{Affirm::VERSION} Ruby\/#{RUBY_VERSION} OpenSSL\/.*$/
+      }
+      expect(stub_headers).to eql stubbed_headers
+    end
+  end
+
+  describe "stub_basic_auth" do
+    it "will return basic_auth array to match with stubbing the request" do
+      expect(stub_basic_auth).to eql [Affirm.config.public_api_key, Affirm.config.private_api_key]
+    end
+  end
 end

@@ -1,31 +1,14 @@
 require "spec_helper"
 
 RSpec.describe Affirm::Client, ".read_transaction" do
-  before do
-    Affirm.configure do |config|
-      config.environment = "sandbox"
-      config.public_api_key = "public_api_key"
-      config.private_api_key = "private_api_key"
-    end
-  end
   let(:transaction_id) { "DVEP-FTQO" }
   subject { Affirm::Client.new.read_transaction(transaction_id) }
 
   it "return the transaction without events by default" do
     stub = stub_request(:get, "https://sandbox.affirm.com/api/v1/transactions/#{transaction_id}")
-      .with(
-        headers: {
-          "Accept" => "application/json",
-          "Content-type" => "application/json",
-          "User-Agent" => /^Affirm\/#{Affirm::VERSION} Ruby\/#{RUBY_VERSION} OpenSSL\/.*$/
-        }
-      )
-      .with(
-        basic_auth: [
-          Affirm.config.public_api_key,
-          Affirm.config.private_api_key
-        ]
-      ).to_return(read_http_fixture("get_transaction/success_captured.http"))
+      .with(headers: stub_headers)
+      .with(basic_auth: stub_basic_auth)
+      .to_return(read_http_fixture("get_transaction/success_captured.http"))
 
     response = subject
     expect(stub).to have_been_requested
@@ -41,19 +24,9 @@ RSpec.describe Affirm::Client, ".read_transaction" do
 
     it "returns the transaction expanded with the passed in param" do
       stub = stub_request(:get, "https://sandbox.affirm.com/api/v1/transactions/#{transaction_id}?expand=events")
-        .with(
-          headers: {
-            "Accept" => "application/json",
-            "Content-type" => "application/json",
-            "User-Agent" => /^Affirm\/#{Affirm::VERSION} Ruby\/#{RUBY_VERSION} OpenSSL\/.*$/
-          }
-        )
-        .with(
-          basic_auth: [
-            Affirm.config.public_api_key,
-            Affirm.config.private_api_key
-          ]
-        ).to_return(read_http_fixture("get_transaction/success_with_multiple_events.http"))
+        .with(headers: stub_headers)
+        .with(basic_auth: stub_basic_auth)
+        .to_return(read_http_fixture("get_transaction/success_with_multiple_events.http"))
 
       response = subject
       expect(stub).to have_been_requested

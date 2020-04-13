@@ -19,3 +19,9 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+Affirm.configure do |config|
+  config.environment = :sandbox
+  config.public_api_key = "public_api_key"
+  config.private_api_key = "private_api_key"
+end

@@ -32,6 +32,22 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+### Testing support
+
+When implementing this gem into your application or other gem, you can reuse the JSON and HTTP payloads and responses. For example with RSpec you can add the following to your `spec_helper.rb` file:
+
+```ruby
+require "affirm/testing_support/http_responses"
+
+RSpec.configure do |config|
+  config.include Affirm::TestingSupport::HttpResponses
+end
+```
+
+this will provide you with the `read_http_fixture` and `read_json_fixture` methods. These can be used to mock the responses and payload body's with `WebMock`.
+
+For details on how to use this, take a look at the usage in the spec files here.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/peterberkenbosch/affirm-ruby-api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/peterberkenbosch/affirm-ruby-api/blob/master/CODE_OF_CONDUCT.md).
