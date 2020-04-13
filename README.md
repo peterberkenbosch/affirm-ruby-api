@@ -25,6 +25,9 @@ Or install it yourself as:
 ## Usage
 
 
+## Sponsorship
+
+If you use this extension and like to support this work, please consider [being a sponsor](https://github.com/sponsors/peterberkenbosch).
 
 ## Development
 
@@ -51,7 +54,6 @@ For details on how to use this, take a look at the usage in the spec files here.
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/peterberkenbosch/affirm-ruby-api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/peterberkenbosch/affirm-ruby-api/blob/master/CODE_OF_CONDUCT.md).
-
 
 ## License
 
