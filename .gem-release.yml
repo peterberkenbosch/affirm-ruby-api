@@ -1,0 +1,5 @@
+bump:
+  recurse: false
+  file: 'lib/affirm/version.rb'
+  message: Bump affirm-ruby-api to %{version}
+  tag: true
