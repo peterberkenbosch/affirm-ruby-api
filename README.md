@@ -1,10 +1,12 @@
-# Affirm Ruby
+# Affirm Ruby API
 
 ![Run Tests](https://github.com/peterberkenbosch/affirm-ruby-api/workflows/Run%20Tests/badge.svg)
 [![Gem Version](https://badge.fury.io/rb/affirm-ruby-api.svg)](https://badge.fury.io/rb/affirm-ruby-api)
 
-Implements the Affirm api using just Ruby. [Affirm documentation](https://docs.affirm.com/affirm-developers/reference)
+Clean, fast and pure Ruby implementation for the [Affirm API](https://docs.affirm.com/affirm-developers/reference)
 
+This is using the new Transaction API and is not compatible with the Charge API.
+Also see the [Affirm Changelog](https://docs.affirm.com/affirm-developers/changelog/transactions-api)
 
 ## Installation
 
