@@ -6,13 +6,11 @@ Gem::Specification.new do |spec|
   spec.authors = ["Peter Berkenbosch"]
   spec.email = ["info@peterberkenbosch.nl"]
 
-  spec.summary = "Affirm Ruby client implementing the new Transaction api"
-  spec.description = spec.summary
+  spec.summary = "Affirm Ruby API implementation"
+  spec.description = "Affirm Ruby API for enabling Affirm Financing in your Ruby based projects."
   spec.homepage = "https://github.com/peterberkenbosch/affirm-ruby-api"
   spec.license = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
-
-  # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/peterberkenbosch/affirm-ruby-api"
