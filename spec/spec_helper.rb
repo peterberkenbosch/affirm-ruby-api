@@ -3,13 +3,10 @@ SimpleCov.start
 
 require "bundler/setup"
 require "affirm"
+require "affirm/testing_support/http_responses"
 require "pry"
 
-unless defined?(SPEC_ROOT)
-  SPEC_ROOT = File.expand_path(__dir__)
-end
-
-Dir[File.join(SPEC_ROOT, "support/**/*.rb")].sort.each { |f| require f }
+Dir[File.join(File.expand_path(__dir__), "support/**/*.rb")].sort.each { |f| require f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -21,4 +18,10 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+end
+
+Affirm.configure do |config|
+  config.environment = :sandbox
+  config.public_api_key = "public_api_key"
+  config.private_api_key = "private_api_key"
 end

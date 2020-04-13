@@ -1,14 +1,6 @@
 require "spec_helper"
 
 RSpec.describe Affirm::Client do
-  before do
-    Affirm.configure do |config|
-      config.environment = :sandbox
-      config.public_api_key = "public_api_key"
-      config.private_api_key = "private_api_key"
-    end
-  end
-
   subject { Affirm::Client.new }
 
   describe "user_agent_string" do
@@ -21,19 +13,9 @@ RSpec.describe Affirm::Client do
     context ":get with default params" do
       it "will build a proper request" do
         stub = stub_request(:get, "https://sandbox.affirm.com/api/v2/method")
-          .with(
-            headers: {
-              "Accept" => "application/json",
-              "Content-type" => "application/json",
-              "User-Agent" => /^Affirm\/#{Affirm::VERSION} Ruby\/#{RUBY_VERSION} OpenSSL\/.*$/
-            }
-          )
-          .with(
-            basic_auth: [
-              Affirm.config.public_api_key,
-              Affirm.config.private_api_key
-            ]
-          ).to_return(status: 200, body: "{}", headers: {})
+          .with(headers: stub_headers)
+          .with(basic_auth: stub_basic_auth)
+          .to_return(status: 200, body: "{}", headers: {})
 
         subject.http_call(:get, :method)
         expect(stub).to have_been_requested
@@ -42,19 +24,9 @@ RSpec.describe Affirm::Client do
       context "with the new transactions api" do
         it "calls the /api/v1 path" do
           stub = stub_request(:get, "https://sandbox.affirm.com/api/v1/transactions")
-            .with(
-              headers: {
-                "Accept" => "application/json",
-                "Content-type" => "application/json",
-                "User-Agent" => /^Affirm\/#{Affirm::VERSION} Ruby\/#{RUBY_VERSION} OpenSSL\/.*$/
-              }
-            )
-            .with(
-              basic_auth: [
-                Affirm.config.public_api_key,
-                Affirm.config.private_api_key
-              ]
-            ).to_return(read_http_fixture("get_transaction/success.http"))
+            .with(headers: stub_headers)
+            .with(basic_auth: stub_basic_auth)
+            .to_return(read_http_fixture("get_transaction/success.http"))
 
           subject.http_call(:get, :transactions)
           expect(stub).to have_been_requested
@@ -65,19 +37,9 @@ RSpec.describe Affirm::Client do
     describe "using invalid api keys" do
       it "will raise AuthenticationError" do
         stub = stub_request(:get, "https://sandbox.affirm.com/api/v2/method")
-          .with(
-            headers: {
-              "Accept" => "application/json",
-              "Content-type" => "application/json",
-              "User-Agent" => /^Affirm\/#{Affirm::VERSION} Ruby\/#{RUBY_VERSION} OpenSSL\/.*$/
-            }
-          )
-          .with(
-            basic_auth: [
-              Affirm.config.public_api_key,
-              Affirm.config.private_api_key
-            ]
-          ).to_return(read_http_fixture("authentication_failed.http"))
+          .with(headers: stub_headers)
+          .with(basic_auth: stub_basic_auth)
+          .to_return(read_http_fixture("authentication_failed.http"))
 
         expect { subject.http_call(:get, :method) }.to raise_error(Affirm::AuthenticationError, "You have provided an invalid API key pair.")
         expect(stub).to have_been_requested
@@ -93,19 +55,9 @@ RSpec.describe Affirm::Client do
     describe "when request times out" do
       it "will raise a RequestError" do
         stub = stub_request(:get, "https://sandbox.affirm.com/api/v2/method")
-          .with(
-            headers: {
-              "Accept" => "application/json",
-              "Content-type" => "application/json",
-              "User-Agent" => /^Affirm\/#{Affirm::VERSION} Ruby\/#{RUBY_VERSION} OpenSSL\/.*$/
-            }
-          )
-          .with(
-            basic_auth: [
-              Affirm.config.public_api_key,
-              Affirm.config.private_api_key
-            ]
-          ).to_timeout
+          .with(headers: stub_headers)
+          .with(basic_auth: stub_basic_auth)
+          .to_timeout
 
         expect { subject.http_call(:get, :method) }.to raise_error(Affirm::RequestError, "execution expired")
         expect(stub).to have_been_requested
@@ -118,19 +70,9 @@ RSpec.describe Affirm::Client do
     describe "when we get a 404" do
       it "will raise a NotFoundError" do
         stub = stub_request(:get, "https://sandbox.affirm.com/api/v2/method")
-          .with(
-            headers: {
-              "Accept" => "application/json",
-              "Content-type" => "application/json",
-              "User-Agent" => /^Affirm\/#{Affirm::VERSION} Ruby\/#{RUBY_VERSION} OpenSSL\/.*$/
-            }
-          )
-          .with(
-            basic_auth: [
-              Affirm.config.public_api_key,
-              Affirm.config.private_api_key
-            ]
-          ).to_return(read_http_fixture("404_not_found.http"))
+          .with(headers: stub_headers)
+          .with(basic_auth: stub_basic_auth)
+          .to_return(read_http_fixture("404_not_found.http"))
 
         expect { subject.http_call(:get, :method) }.to raise_error(Affirm::NotFoundError)
         expect(stub).to have_been_requested
@@ -138,21 +80,11 @@ RSpec.describe Affirm::Client do
     end
 
     describe "when we get a 500" do
-      it "will raise a NotFoundError" do
+      it "will raise a Affirm::Error" do
         stub = stub_request(:get, "https://sandbox.affirm.com/api/v2/method")
-          .with(
-            headers: {
-              "Accept" => "application/json",
-              "Content-type" => "application/json",
-              "User-Agent" => /^Affirm\/#{Affirm::VERSION} Ruby\/#{RUBY_VERSION} OpenSSL\/.*$/
-            }
-          )
-          .with(
-            basic_auth: [
-              Affirm.config.public_api_key,
-              Affirm.config.private_api_key
-            ]
-          ).to_return(status: 500, body: "{}", headers: {})
+          .with(headers: stub_headers)
+          .with(basic_auth: stub_basic_auth)
+          .to_return(status: 500, body: "{}", headers: {})
 
         expect { subject.http_call(:get, :method) }.to raise_error(Affirm::Error)
         expect(stub).to have_been_requested

@@ -1,4 +1,3 @@
-require "pry"
 module Affirm
   class Client
     def initialize

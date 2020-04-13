@@ -7,6 +7,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+- Introduce `TestingSupport::HttpResponses` for sharing the http and JSON fixtures
+so we can share these in environments that use this gem.
 
 ## [1.0.0] - 2020-04-13
 
