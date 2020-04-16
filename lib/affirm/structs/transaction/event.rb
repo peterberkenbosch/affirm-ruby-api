@@ -7,7 +7,6 @@ module Affirm
       attr_accessor :type
       attr_accessor :fee
       attr_accessor :currency
-      attr_accessor :events
     end
   end
 end
