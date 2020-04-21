@@ -7,6 +7,10 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+- Fix Gemfile.lock missing version bump
+- Support Ruby >= 2.5 (https://www.ruby-lang.org/en/news/2020/04/05/support-of-ruby-2-4-has-ended/)
+
 ## [1.0.1] - 2020-04-13
 
 ### Added
