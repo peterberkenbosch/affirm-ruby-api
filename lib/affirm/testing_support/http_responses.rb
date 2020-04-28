@@ -1,3 +1,5 @@
+require_relative "../version"
+
 module Affirm
   module TestingSupport
     module HttpResponses
