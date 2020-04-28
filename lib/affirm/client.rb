@@ -187,7 +187,7 @@ module Affirm
         raise NotFoundError, response
       when 500, 502, 503, 504
         # 500, 502, 503, 504 - Server Errors
-        raise Error
+        raise Error, response
       end
     end
 
