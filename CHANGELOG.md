@@ -7,6 +7,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- Add `response` to message when raising 50X errors from Affirm.
+- Fix missing `Affirm::VERSION` in `http_responses` testing support.
+- Remove Gemfile.lock and ignore.
+
 ## [1.0.2] - 2020-04-21
 
 ### Changed
