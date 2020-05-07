@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/peterberkenbosch/affirm-ruby-api/compare/v1.0.2...HEAD)
 
+**Implemented enhancements:**
+
+- Use gitbook.io for official documentation [\#8](https://github.com/peterberkenbosch/affirm-ruby-api/pull/8) ([peterberkenbosch](https://github.com/peterberkenbosch))
+
 **Merged pull requests:**
 
 - Bump standard from 0.2.4 to 0.2.5 [\#7](https://github.com/peterberkenbosch/affirm-ruby-api/pull/7) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
