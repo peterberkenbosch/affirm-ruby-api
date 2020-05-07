@@ -1,4 +1,4 @@
-name: Tests
+name: StandardRB
 
 on:
   pull_request:
@@ -9,8 +9,8 @@ on:
       - master
 
 jobs:
-  ruby_test:
-    name: Ruby Test Action
+  standard:
+    name: StandardRB Check Action
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -29,5 +29,5 @@ jobs:
         gem install bundler
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
-    - name: Run ruby tests
-      run: bundle exec rake
+    - name: Run StandardRB
+      run: bundle exec standardrb --format progress
