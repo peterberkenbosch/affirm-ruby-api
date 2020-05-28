@@ -82,7 +82,7 @@ module Affirm
     #
     # @param [String] transaction_id
     # @param [String] expand
-    # @return <Struct::Transaction::Event>
+    # @return <Struct::Transaction>
     #
     # @raise Affirm::RequestError
     def read_transaction(transaction_id, expand = nil)
