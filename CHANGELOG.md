@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/peterberkenbosch/affirm-ruby-api/tree/HEAD)
+## [v1.0.3](https://github.com/peterberkenbosch/affirm-ruby-api/tree/v1.0.3) (2020-05-28)
 
-[Full Changelog](https://github.com/peterberkenbosch/affirm-ruby-api/compare/v1.0.2...HEAD)
+[Full Changelog](https://github.com/peterberkenbosch/affirm-ruby-api/compare/v1.0.2...v1.0.3)
 
 **Implemented enhancements:**
 
