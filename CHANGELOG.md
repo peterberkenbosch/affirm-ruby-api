@@ -10,6 +10,7 @@
 
 **Merged pull requests:**
 
+- Add provider to transaction [\#10](https://github.com/peterberkenbosch/affirm-ruby-api/pull/10) ([peterberkenbosch](https://github.com/peterberkenbosch))
 - Bump standard from 0.2.4 to 0.2.5 [\#7](https://github.com/peterberkenbosch/affirm-ruby-api/pull/7) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 ## [v1.0.2](https://github.com/peterberkenbosch/affirm-ruby-api/tree/v1.0.2) (2020-04-21)
